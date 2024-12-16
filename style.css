@@ -1,0 +1,258 @@
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Top Bar */
+
+.top-bar {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+.top-bar a {
+    color: #fff;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #555;
+}
+
+.search-cart {
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.cart-icon {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* Hero Section */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%;
+    background-color: #fff;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.shop-now {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.shop-now:hover {
+    background-color: #444;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+
+/* Brands Section */
+
+.brands {
+    display: flex;
+    justify-content: space-around;
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* Grid Sections (New Arrivals and Top Selling) */
+
+.new-arrivals,
+.top-selling {
+    text-align: center;
+    padding: 40px 10%;
+    background-color: #fff;
+}
+
+.new-arrivals h2,
+.top-selling h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #fefefe;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-weight: bold;
+    color: #333;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-left: 5px;
+}
+
+
+/* Star Rating */
+
+.rating {
+    font-size: 1rem;
+    color: #f5c518;
+    /* Yellow color for stars */
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+
+/* Hover Effect */
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .hero-image img {
+        max-width: 300px;
+    }
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links {
+        margin-top: 10px;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
